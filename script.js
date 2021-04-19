@@ -19,7 +19,7 @@ function generateCV(){
     //document.getElementById('nameT2').innerHTML = nameField;
 
     //contact
-    document.getElementById('contactT').innerHTML = document.getElementById('conactField').value;
+    document.getElementById('contactT').innerHTML = document.getElementById('contactField').value;
 
     //address
     document.getElementById('addressT').innerHTML = document.getElementById('addressField').value;
