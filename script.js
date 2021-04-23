@@ -109,7 +109,7 @@ function generateCV() {
 	//     str2 = str2 + `<li> ${e.value} </li>`;
 	// }
 	// document.getElementById('ihT').innerHTML = str2;
-
+	// asdasdasdas
 	// document.getElementById('cv-form').style.display = 'none'
 	// document.getElementById('cv-template').style.display = 'block'
 	var name = document.getElementById("nameField").value;
