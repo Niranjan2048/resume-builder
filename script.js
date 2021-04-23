@@ -59,62 +59,61 @@ function AddNewWeField() {
 
 //CV generation
 function generateCV(){
-  //var data = document.getElementById('nameField').value;
-  //window.nameT1.href="format1.html?data="+data
-  document.getElementById('nameT1').innerHTML = document.getElementById('nameField').value;
 
-  //document.getElementById('nameT2').innerHTML = nameField;
+	localStorage.setItem("name", document.getElementById("nameField").value);
 
-  //contact
-  document.getElementById('contactT').innerHTML = document.getElementById('contactField').value;
+  localStorage.setItem("contact", document.getElementById("contactField").value);
 
-  //address
-  document.getElementById('addressT').innerHTML = document.getElementById('addressField').value;
+  localStorage.setItem("address", document.getElementById("addressField").value);
 
-  //facebook
-  //document.getElementById('fbT').innerHTML = document.getElementById('fbField').value;
-  //instagram
-  document.getElementById('instaT').innerHTML = document.getElementById('instaField').value;
-  //linkedin
-  document.getElementById('linkedT').innerHTML = document.getElementById('linkedField').value;
-  //e-mail
-  document.getElementById('mailT').innerHTML = document.getElementById('mailField').value;
-  //github
-  document.getElementById('gitT').innerHTML = document.getElementById('gitField').value;
+  localStorage.setItem("insta", document.getElementById("instaField").value);
 
+  localStorage.setItem("mail", document.getElementById("mailField").value);
 
-  //objective
-  document.getElementById('objectiveT').innerHTML = document.getElementById('objectiveField').value;
+  localStorage.setItem("linkedin", document.getElementById("linkedField").value);
 
-  //work experience
+  localStorage.setItem("github", document.getElementById("gitField").value);
+
+  localStorage.setItem("objective", document.getElementById("objectiveField").value);
+
   let wes = document.getElementsByClassName('weField')
-  let str =''
-  for(let e of wes)
-  {
-      str = str + `<li> ${e.value} </li>`;
-  }
-  document.getElementById('weT').innerHTML = str;
+   let str =''
+   for(let e of wes)
+   {
+       str = str + `<li> ${e.value} </li>`;
+   }
+   localStorage.setItem("work", str);
 
   //academic qualifications
-  let aqs = document.getElementsByClassName('eqField')
-  let str1 =''
-  for(let e of aqs)
-  {
-      str1 = str1 + `<li> ${e.value} </li>`;
-  }
-  document.getElementById('aqT').innerHTML = str1;
+   let aqs = document.getElementsByClassName('eqField')
+   let str1 =''
+   for(let e of aqs)
+   {
+       str1 = str1 + `<li> ${e.value} </li>`;
+   }
+   localStorage.setItem("qualification", str1);
 
-  //hobbies
-  let ihs = document.getElementsByClassName('ihField')
-  let str2 =''
-  for(let e of ihs)
-  {
-      str2 = str2 + `<li> ${e.value} </li>`;
-  }
-  document.getElementById('ihT').innerHTML = str2;
+   //hobbies
+   let ihs = document.getElementsByClassName('ihField')
+   let str2 =''
+   for(let e of ihs)
+   {
+       str2 = str2 + `<li> ${e.value} </li>`;
+   }
+   localStorage.setItem("hobbie", str2);
 
-  //document.getElementById('cv-form').style.display = 'none'
-  //document.getElementById('cv-template').style.display = 'block'
+   //reference
+   let rfs = document.getElementsByClassName('refField')
+   let str3 =''
+   for(let e of rfs)
+   {
+       str3 = str3 + `<li> ${e.value} </li>`;
+   }
+   localStorage.setItem("reference", str3);
+   
+  
+	 window.location.href =
+		"http://127.0.0.1:5500/resume-builder/format1.html";
 } 
 
 function printCV(){
