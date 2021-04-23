@@ -59,6 +59,8 @@ function AddNewWeField() {
 
 //CV generation
 function generateCV(){
+  //var data = document.getElementById('nameField').value;
+  //window.nameT1.href="format1.html?data="+data
   document.getElementById('nameT1').innerHTML = document.getElementById('nameField').value;
 
   //document.getElementById('nameT2').innerHTML = nameField;
@@ -111,8 +113,8 @@ function generateCV(){
   }
   document.getElementById('ihT').innerHTML = str2;
 
-  document.getElementById('cv-form').style.display = 'none'
-  document.getElementById('cv-template').style.display = 'block'
+  //document.getElementById('cv-form').style.display = 'none'
+  //document.getElementById('cv-template').style.display = 'block'
 } 
 
 function printCV(){

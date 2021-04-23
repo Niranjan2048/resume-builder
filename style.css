@@ -3,7 +3,7 @@
 }
 
 #cv-template{
-    display: none;
+    /*display: none;*/
 }
 
 .myimg{
@@ -14,3 +14,4 @@
 .background{
     background-color: aqua;
 }
+
