@@ -116,7 +116,7 @@ function generateCV() {
 	// alert(name);
 	localStorage.setItem("naav", name);
 	window.location.href =
-		"file:///C:/Users/anujj/Documents/projects/resume-builder/format1.html";
+		"file:///C:/Users/anujj/Documents/projects/resume-builder/format2.html";
 }
 
 function printCV() {
