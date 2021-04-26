@@ -22,3 +22,48 @@
 	max-width: 1000px;
 }
 
+.profileimg{
+	width: 200px;
+	float: left;
+	margin-left: 2px;
+	padding: 5px;
+}
+.background1a{
+	background-color: #ffffff;
+}
+
+.background1b{
+	background-color: #8a8888;
+	color: #ffffff;
+}
+
+.background1c{
+	background-color: #aba446;
+}
+
+.background1d{
+	background-color: #545454;
+	color: #ffffff;
+}
+
+.background1e{
+	background-color: #292828;
+	color: #ffffff;
+}
+
+div{
+	padding: 5px;
+}
+
+.name{
+	text-align: center;
+	background-color: #c4ae06;
+}
+
+.proname{
+	background-color: black;
+	text-align: left;
+	color: red;
+	background-size: cover;
+}
+
