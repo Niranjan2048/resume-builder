@@ -1,3 +1,5 @@
+import print from 'print-js';
+
 document.getElementById("nameT1").innerHTML = localStorage.getItem("name");
 document.getElementById("contactT").innerHTML = localStorage.getItem("contact");
 document.getElementById("addressT").innerHTML = localStorage.getItem("address");
@@ -17,3 +19,10 @@ function printCV()
 {
 	window.print();
 }
+// function printCV(){
+// 	printJS({
+// 		printable: 'cv-template',
+// 		type: 'html',
+// 		targetStyles: ['*']
+// 	  })
+//   }

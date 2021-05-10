@@ -59,7 +59,7 @@ function AddNewWeField() {
   //CV generation
   function generateCV(){
 
-	  localStorage.setItem("name", document.getElementById("nameField").value);
+	localStorage.setItem("name", document.getElementById("nameField").value);
 
 	localStorage.setItem("contact", document.getElementById("contactField").value);
 
