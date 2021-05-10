@@ -1,3 +1,5 @@
+import print from 'print-js'
+
 function AddNewWeField() {
   //console.log("Adding A new file");
    let newNode= document.createElement('textarea');
@@ -11,7 +13,7 @@ function AddNewWeField() {
    let weAddButtonob= document.getElementById('weAddButton');
  
    WEob.insertBefore(newNode, weAddButtonob);
- }
+ 
  //Education and Qualification
  function AddNewEqField() {
     let newNode= document.createElement('textarea');
@@ -110,12 +112,31 @@ function generateCV(){
        str3 = str3 + `<li> ${e.value} </li>`;
    }
    localStorage.setItem("reference", str3);
-   
+
+   localStorage.setItem("skill1", document.getElementById("skill_value1").value);
+   localStorage.setItem("skillper1", document.getElementById("skill_comp1").value);
+
+   localStorage.setItem("skill2", document.getElementById("skill_value2").value);
+   localStorage.setItem("skillper2", document.getElementById("skill_comp2").value);
+
+   localStorage.setItem("skill3", document.getElementById("skill_value3").value);
+   localStorage.setItem("skillper3", document.getElementById("skill_comp3").value);
+
+   localStorage.setItem("skill4", document.getElementById("skill_value4").value);
+   localStorage.setItem("skillper4", document.getElementById("skill_comp4").value);
   
 	 window.location.href =
 		"http://127.0.0.1:5500/resume-builder/format1.html";
 } 
 
 function printCV(){
-  window.print();
+  // let restpage = document.body.innerHTML;
+  // let printcont = document.getElementById(el).innerHTML;
+  // document.body.innerHTML = printcont;
+  printJS({
+    printable: 'cv-template',
+    type: 'html',
+    targetStyles: ['*']
+  })
+  //document.body.innerHTML = restpage;
 }
