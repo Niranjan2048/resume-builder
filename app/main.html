@@ -12,7 +12,7 @@
   <title>Resume Builder</title>
 </head>
 
-<body>
+<body class="resume-form">
 
   <!-- Html code -->
   <div class="container" id="cv-form">
@@ -44,6 +44,25 @@
           <label for="addressField">Your Address</label>
           <textarea id="addressField" placeholder="Enter here" class="form-control" rows="5"></textarea>
         </div>
+        <div class="form-group mt-3">
+          <label for="">Profile Image</label>
+          <form  enctype="multipart/form-data">
+            <label for="image-upload">Select an image:</label><br/>
+            <input name="image-upload" type="file" class="file-input" />
+        </form>
+        
+        <label>This is the Image:</label><br/>
+        <div class="image-container">
+            <img src="" id="image-preview" />
+        </div>
+        <br/>
+        <br/>
+        
+        <label>This is the localstorage output:</label><br/>
+        <div class="localstorage-output"></div>
+        <br/>
+        <br/>
+        </div>
 
         <p class="text-secondary my-3">Important Links</p>
 
@@ -63,24 +82,7 @@
         </div>
 
         
-        <!-- <div class="form-group row">
-          <label for="" class="col-sm-3 col-form-label my-1">Skill Name :</label>
-          <div class="col-sm-9">
-            <input type="text" class="form-control" id="skill_value" placeholder="Enter here">
-          </div>
-        </div>
-
-        <div class="form-group row">
-          <label for="" class="col-sm-3 col-form-label ">Level :</label>
-          <div class="col-sm-9">
-            <select class="custom-select my-2">
-              <option selected>Open this select menu</option>
-              <option value="1">Beginner</option>
-              <option value="2">Intermidiate</option>
-              <option value="3">Expert</option>
-            </select>
-          </div>
-        </div> -->
+      
         <p class="text-secondary my-3 text-sm-center " >Skills</p>
           <div class="form-group row">
           <label for="" class="col-sm-3 col-form-label my-1">Skill Name :</label>
@@ -205,13 +207,14 @@
       </div>
     </div>
 
-    <div class="container text-center mt-3 mb-5" >
-      <a href="format2.html">
-        <button  onclick="generateCV()" class="btn btn-dark btn-lg">Generate CV</button>
-      </a>
-    </div>
+    
 
     </div>
+  </div>
+  <div class="container text-center mt-5 mb-5" >
+    <a href="carousel.html">
+      <button  onclick="generateCV()" class="btn btn-dark btn-lg">Generate CV</button>
+    </a>
   </div>
 
   </div>
@@ -221,7 +224,6 @@
     crossorigin="anonymous"></script>
 
 </body>
-
 <script src="script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/darkmode-js@1.5.7/lib/darkmode-js.min.js"></script>
 <script>

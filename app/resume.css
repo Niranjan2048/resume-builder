@@ -10,7 +10,12 @@
 	border-radius: 50%;
 	width: 225px;
 }
-
+.resume-form{
+	/* background-image: url("/app/images/img1.jpg	");
+	background-repeat: no-repeat;
+	background-size: cover; */
+	color: #ff031c;
+}
 .background {
 	background: linear-gradient(to top, #10027a, #1668f5);
 	color: #ffffff;
@@ -51,6 +56,15 @@
 	background-color: #292828;
 	color: #ffffff;
 }
+.bgcolor {
+	
+ 
+		
+		  background: url("/app/images/img1.jpg");
+		  background-repeat: no-repeat;
+		  background-size:auto;
+		  
+	  }
 
 div{
 	padding: 5px;
@@ -135,4 +149,36 @@ div{
 .format4-head{
 	background-color: #43c7f0;
 	color: white;
+}
+.background2{
+    background-color: #00203FFF;
+    color: white;
+}
+
+.myimg2{
+    border-radius: 50%;
+    width: 225px;
+    border: 5px solid aqua;
+    margin-bottom: 10px;
+}
+
+.format2-head{
+    background-color: #ADEFD1FF;
+    color: white;
+}
+.background3{
+    background-color: #12fa0a(184, 144, 13);
+    color: white;
+}
+
+.myimg3{
+    border-radius: 50%;
+    width: 225px;
+    border: 5px solid aqua;
+    margin-bottom: 10px;
+}
+
+.format3-head{
+    background-color: black;
+    color: white;
 }

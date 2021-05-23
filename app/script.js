@@ -1,19 +1,3 @@
-// const options = {
-// 	bottom: '64px', // default: '32px'
-// 	right: 'unset', // default: '32px'
-// 	left: '32px', // default: 'unset'
-// 	time: '0.5s', // default: '0.3s'
-// 	mixColor: '#fff', // default: '#fff'
-// 	backgroundColor: '#fff',  // default: '#fff'
-// 	buttonColorDark: '#100f2c',  // default: '#100f2c'
-// 	buttonColorLight: '#fff', // default: '#fff'
-// 	saveInCookies: false, // default: true,
-// 	label: '🌓', // default: ''
-// 	autoMatchOsTheme: true // default: true
-//   }
-  
-//   const darkmode = new Darkmode(options);
-//   darkmode.showWidget();
 function AddNewWeField() {
 	//console.log("Adding A new file");
 	 let newNode= document.createElement('textarea');
@@ -41,6 +25,8 @@ function AddNewWeField() {
 
 	  Eqob.insertBefore(newNode, eqAddButtonob);
 	}
+	
+	
 
    //Interests And Hobbies
    function AddNewIhField() {
@@ -56,7 +42,7 @@ function AddNewWeField() {
 
 	  Ihob.insertBefore(newNode, ihAddButtonob);
 	}
-
+    
 	//References
 	function AddNewRefField() {
 	  let newNode= document.createElement('textarea');
@@ -90,6 +76,10 @@ function AddNewWeField() {
 	localStorage.setItem("github", document.getElementById("gitField").value);
 
 	localStorage.setItem("objective", document.getElementById("objectiveField").value);
+	
+	// bannerImage = document.getElementById('imgfield');
+    // imgData = getBase64Image(bannerImage);
+    // localStorage.setItem("image", imgData);
 
 	let wes = document.getElementsByClassName('weField')
 	 let str =''
@@ -97,7 +87,8 @@ function AddNewWeField() {
 	 {
 		 str = str + `<li> ${e.value} </li>`;
 	 }
-	 localStorage.setItem("work", str);
+	 //localStorage.setItem("work", str);
+	 localStorage.setItem("work", JSON.stringify(str)); 
 
 	//academic qualifications
 	 let aqs = document.getElementsByClassName('eqField')
@@ -105,8 +96,9 @@ function AddNewWeField() {
 	 for(let e of aqs)
 	 {
 		 str1 = str1 + `<li> ${e.value} </li>`;
-		 localStorage.setItem("qualification", str1);
+		 
 	 }
+	 localStorage.setItem("qualification", JSON.stringify(str1));
 	 
 
 	 //hobbies
@@ -116,7 +108,7 @@ function AddNewWeField() {
 	 {
 		 str2 = str2 + `<li> ${e.value} </li>`;
 	 }
-	 localStorage.setItem("hobbie", str2);
+	 localStorage.setItem("hobbie", JSON.stringify(str2));
 
 	 //reference
 	 let rfs = document.getElementsByClassName('refField')
@@ -125,7 +117,7 @@ function AddNewWeField() {
 	 {
 		 str3 = str3 + `<li> ${e.value} </li>`;
 	 }
-	 localStorage.setItem("reference", str3);
+	 localStorage.setItem("reference", JSON.stringify(str3));
 	 localStorage.setItem("skill1", document.getElementById("skill_value1").value);
    	localStorage.setItem("skillper1", document.getElementById("skill_comp1").value);
 
@@ -139,5 +131,5 @@ function AddNewWeField() {
    	localStorage.setItem("skillper4", document.getElementById("skill_comp4").value);
 
 
-	   window.location.href ="http://127.0.0.1:5500/app/format2.html";
+	   window.location.href ="http://127.0.0.1:5500/app/carousel.html";
   }
