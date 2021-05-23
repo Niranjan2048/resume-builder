@@ -1,19 +1,19 @@
-const options = {
-	bottom: '64px', // default: '32px'
-	right: 'unset', // default: '32px'
-	left: '32px', // default: 'unset'
-	time: '0.5s', // default: '0.3s'
-	mixColor: '#fff', // default: '#fff'
-	backgroundColor: '#fff',  // default: '#fff'
-	buttonColorDark: '#100f2c',  // default: '#100f2c'
-	buttonColorLight: '#fff', // default: '#fff'
-	saveInCookies: false, // default: true,
-	label: '🌓', // default: ''
-	autoMatchOsTheme: true // default: true
-  }
+// const options = {
+// 	bottom: '64px', // default: '32px'
+// 	right: 'unset', // default: '32px'
+// 	left: '32px', // default: 'unset'
+// 	time: '0.5s', // default: '0.3s'
+// 	mixColor: '#fff', // default: '#fff'
+// 	backgroundColor: '#fff',  // default: '#fff'
+// 	buttonColorDark: '#100f2c',  // default: '#100f2c'
+// 	buttonColorLight: '#fff', // default: '#fff'
+// 	saveInCookies: false, // default: true,
+// 	label: '🌓', // default: ''
+// 	autoMatchOsTheme: true // default: true
+//   }
   
-  const darkmode = new Darkmode(options);
-  darkmode.showWidget();
+//   const darkmode = new Darkmode(options);
+//   darkmode.showWidget();
 function AddNewWeField() {
 	//console.log("Adding A new file");
 	 let newNode= document.createElement('textarea');
@@ -105,8 +105,9 @@ function AddNewWeField() {
 	 for(let e of aqs)
 	 {
 		 str1 = str1 + `<li> ${e.value} </li>`;
+		 localStorage.setItem("qualification", str1);
 	 }
-	 localStorage.setItem("qualification", str1);
+	 
 
 	 //hobbies
 	 let ihs = document.getElementsByClassName('ihField')
@@ -138,5 +139,5 @@ function AddNewWeField() {
    	localStorage.setItem("skillper4", document.getElementById("skill_comp4").value);
 
 
-	   window.location.href ="http://127.0.0.1:5500/format1.html";
+	   window.location.href ="http://127.0.0.1:5500/app/format2.html";
   }

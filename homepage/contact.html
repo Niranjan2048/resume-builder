@@ -46,15 +46,14 @@
    <div class="con_container">
    <section class="contact">
 
-    <form action="">
+    <form action="javascript:sendmail()" method="POST">
       <h5 class="headf">Contact Form</h5>
-
-        <input type="text" class="box" placeholder=" Enter subject here">
-        <input type="email" class="box" placeholder=" E-mail address">
-        <input type="text" class="box" placeholder=" Your name">
-        <textarea name="" id="" cols="30" rows="10" class="box message" placeholder=" Let us know how we can help you!"></textarea>
+        <input type="text" class="box" placeholder=" Your name" id="Name"> 
+        <input type="email" class="box" placeholder=" E-mail address" id="usermail"> 
+        <input type="text" class="box" placeholder=" Enter subject here" id="Subject">
+        <textarea name="Message" id="Message" cols="30" rows="10" class="box message" placeholder=" Let us know how we can help you!" ></textarea>
     
-        <input type="submit" class="subbtn" value="SEND MESSAGE">
+        <button type="submit" class="subbtn">SEND MESSAGE</button>
     
     </form>
     
@@ -87,7 +86,7 @@
           <p class="website__rights">© KAMINARIMON 2021. All rights reserved</p>
 
         <div class="footer__about">
-            <a href="#about" >About us</a>
+            <a href="homepage.html#about" >About us</a>
 
             <a href="contact.html" >Contact us</a>
 
@@ -116,7 +115,40 @@
     </div>
 
     <!-- Footer Ends  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script>
+             function sendmail(){
+    
+              var name = $('#Name').val();
+              var email = $('#usermail').val();
+              var subject = $('#Subject').val();
+              var message = $('#Message').val();
 
+              var Body='Name: '+name+'<br>Email: '+email+'<br>Subject: '+subject+'<br>Message: '+message;
 
+    Email.send({
+      SecureToken:"c9c11eaa-67de-4edc-b9a9-c6e284a7cc6b",
+      To: 'resumifycare@gmail.com',
+      From: "demoresumify@gmail.com",
+      Subject: "New message on contact from "+name,
+      Body: Body
+    }).then(
+      message =>{
+        if(message=='OK'){
+        alert('Your mail has been sent. Thank you for Contacting Us.');
+        }
+        else{
+          console.error (message);
+          alert('There is error at sending message. ')
+          
+        }
+
+      }
+    );
+
+  }
+
+   </script>
   </body>
 </html>
