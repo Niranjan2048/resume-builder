@@ -1,4 +1,22 @@
+// var el = document.querySelector('body');
+// el.style.backgroundImage = 'url(' + localStorage['foo'] + ')';
+// var image1=document.getElementById("image1");  
+// image1.src='url(' + localStorage['foo'] + ')';
 
+$("#profileImage").click(function(e) {
+    $("#imageUpload").click();
+});
+
+function fasterPreview( uploader ) {
+    if ( uploader.files && uploader.files[0] ){
+          $('#profileImage').attr('src', 
+             window.URL.createObjectURL(uploader.files[0]) );
+    }
+}
+
+$("#imageUpload").change(function(){
+    fasterPreview( this );
+});
 
 document.getElementById("nameT1").innerHTML = localStorage.getItem("name");
 document.getElementById("nameT2").innerHTML = localStorage.getItem("name");
@@ -16,9 +34,6 @@ document.getElementById("ihT").innerHTML = JSON.parse(localStorage.getItem("hobb
 document.getElementById("refT").innerHTML = JSON.parse(localStorage.getItem("reference"));
 document.getElementById("skillt1").innerHTML= localStorage.getItem("skill1");
 //document.getElementById("image").innerHTML= localStorage.getItem("image");
-var dataImage = localStorage.getItem('image');
-bannerImg = document.getElementById('image');
-bannerImg.src = "data:image/png;base64," + dataImage;
 
 var skill1per = localStorage.getItem("skillper1");
 //var bar1 = document.getElementsByClassName("progress-bar");

@@ -1,3 +1,16 @@
+var input = document.getElementById('uploadImage');
+    input.onchange = function(evt){
+        var tgt = evt.target || window.event.srcElement, 
+            files = tgt.files;
+
+        if (FileReader && files && files.length) {
+            var fr = new FileReader();
+            fr.onload = function () {
+                localStorage['foo'] = fr.result;
+            }
+            fr.readAsDataURL(files[0]);
+        }
+    }
 function AddNewWeField() {
 	//console.log("Adding A new file");
 	 let newNode= document.createElement('textarea');
